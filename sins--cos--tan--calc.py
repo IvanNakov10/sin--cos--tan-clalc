@@ -1,12 +1,13 @@
-import math 
+import math
 
-def degreeCalc(degree):
-    angle_in_radians = (degree * math.pi) / 180
+def calculate_trigonometry(angle_in_degrees):
+    angle_in_radians = (angle_in_degrees * math.pi) / 180
+    sin_angle = math.sin(angle_in_radians)
+    cos_angle = math.cos(angle_in_radians)
+    tan_angle = math.tan(angle_in_radians)
+    print("sin(", angle_in_degrees, "degrees) =", sin_angle)
+    print("cos(", angle_in_degrees, "degrees) =", cos_angle)
+    print("tan(", angle_in_degrees, "degrees) =", tan_angle)
 
-    angleCos = math.cos(angle_in_radians)
-    angleSin = math.sin(angle_in_radians)
-    angleTan = math.tan(angle_in_radians)
-
-    print("Cos of " + degree + " is " + angleCos)
-    print("Sin of " + degree + " is " + angleSin)
-    print("Tan of " + degree + " is " + angleTan)
+angle = float(input("Enter an angle in degrees: "))
+calculate_trigonometry(angle)
